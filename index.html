@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SiPencari</title>
+    <link rel="stylesheet" href="/vendor/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="d-flex flex-column">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">SiPencari</a>
+        </div>
+      </nav>
+      <main
+        class="d-flex flex-column flex-1 align-items-center justify-content-center"
+      >
+        <div class="landing-page-marquee">
+          <marquee
+            >Marilah kita menyongsong Industri 4.0 dengan mencintai
+            produk-produk karya anak bangsa.</marquee
+          >
+        </div>
+        <div class="container-xl py-5">
+          <form id="formpencarian" action="#">
+            <input
+              id="katakunci"
+              class="form-control form-control-lg"
+              type="text"
+              placeholder="Cari website di sini..."
+            />
+            <button type="submit" class="btn btn-primary">
+              Telusuri
+            </button>
+          </form>
+        </div>
+        <div id="hasil" class="container-xl py-5">
+          <h2>Hasil pencarian</h2>
+          <div id="hasil-inner"></div>
+        </div>
+      </main>
+    </div>
+    <script src="/vendor/js/bootstrap.min.js"></script>
+    <script src="/js/script.js"></script>
+  </body>
+</html>

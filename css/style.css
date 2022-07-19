@@ -1,0 +1,19 @@
+html,
+body {
+  height: 100%;
+  min-height: 100vh;
+}
+
+.landing-page-marquee {
+  width: 100%;
+  padding: 8px;
+  background-color: #1474ae;
+  color: #fff;
+}
+.landing-page-marquee marquee {
+  vertical-align: middle;
+}
+
+#hasil {
+  display: none;
+}
