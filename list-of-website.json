@@ -1,0 +1,9 @@
+{
+  websites: [
+    {
+      url: 'https://google.com',
+      description: 'Search engine karya bangsa asing.',
+    }
+  ],
+}
+
