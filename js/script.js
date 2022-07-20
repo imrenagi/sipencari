@@ -39,8 +39,14 @@ function telusuri(e) {
   });
 }
 
+function handleFeelingLucky() {
+  console.log('Mimicking a click on the "Feeling Lucky" button except it does nothing, just like your average government website buttons.');
+}
+
 (function main() {
   const form = document.querySelector("#formpencarian");
-
+  const feelingLucky = document.querySelector("#feelinglucky");
+  
   form.addEventListener('submit', telusuri);
+  feelingLucky.addEventListener('click', handleFeelingLucky);
 })();
