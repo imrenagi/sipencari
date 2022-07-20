@@ -1,0 +1,8 @@
+version: '3.9'
+services:
+  sipencari:
+    container_name: sipencari
+    image: sipencari:0.0.1
+    build: .
+    ports:
+      - "8181:80"
