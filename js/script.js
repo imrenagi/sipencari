@@ -4,19 +4,34 @@ function telusuri(e) {
   const kataKunci = document.querySelector("#katakunci");
   const panelhasil = document.querySelector("#hasil");
   const panelhasilinner = document.querySelector("#hasil-inner");
-  const source = fetch("/list-of-website.json");
+  const source = fetch("/list-of-website.json").then((res) => res.json());
+  const blokirSource = fetch("/list-of-blocked-sites.json").then((res) => res.json());
 
-  source.then((res) => {
-    res.json().then((data) => {
+  Promise.all([source, blokirSource])
+    .then((res) => {
+      const res1 = res[0];
+      const res2 = res[1];
+
       panelhasil.style = "display: none";
       panelhasilinner.innerHTML = null;
 
       if (kataKunci.value) {
-        const hasil = data.websites.filter(
+        const hasil = res1.websites.filter(
           (item) =>
             item.url.includes(kataKunci.value) ||
             item.description.includes(kataKunci.value)
         );
+        const hasilBlokir = res2.websites.filter(
+          (item) =>
+            item.url.includes(kataKunci.value) ||
+            item.description.includes(kataKunci.value)
+        );
+
+        if (hasilBlokir.length > 0) {
+          panelhasil.style = "display: block";
+          panelhasilinner.innerHTML = `<div class="text-danger">Situs atau kata kunci ini <b>DIBLOKIR!</b>.</div>`;
+          return;
+        }
 
         if (hasil.length > 0) {
           panelhasil.style = "display: block";
@@ -36,7 +51,6 @@ function telusuri(e) {
         panelhasilinner.innerHTML = `<div>Tidak ada hasil pencarian.</div>`;
       }
     });
-  });
 }
 
 (function main() {
