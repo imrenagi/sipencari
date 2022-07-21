@@ -17,3 +17,46 @@ body {
 #hasil {
   display: none;
 }
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 8px 30px;
+  background-color: #1474ae;
+}
+
+footer .footer-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .footer-content ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+footer .footer-content ul li a {
+  color: white;
+  text-decoration: none;
+  margin-left: 30px;
+  font-size: 0.9rem;
+  transition: all;
+  transition-duration: 200ms;
+}
+
+footer .footer-content ul li a:hover {
+  color: white;
+  text-decoration: none;
+  color: rgb(198, 198, 198);
+}
+
+footer p {
+  color: white;
+  margin-bottom: 0;
+  font-size: 0.9rem;
+}
