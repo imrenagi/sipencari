@@ -17,3 +17,7 @@ body {
 #hasil {
   display: none;
 }
+
+.no-bullets {
+  list-style-type: none;
+}
