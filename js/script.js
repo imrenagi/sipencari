@@ -22,10 +22,9 @@ function telusuri(e) {
           panelhasil.style = "display: block";
 
           hasil.forEach((item) => {
-            panelhasilinner.innerHTML += `<div>
-              <div>${item.url}</div>
-              <div>${item.description}</div>
-            </div>`;
+            panelhasilinner.innerHTML += `<li class="my-4 no-bullets">
+            <a href="${item.url}">${item.description}</a>
+            </li>`;
           });
         } else {
           panelhasil.style = "display: block";
